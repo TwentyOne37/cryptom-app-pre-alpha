@@ -7,7 +7,7 @@
     "compile": "hardhat compile",
     "coverage": "hardhat coverage",
     "typechain": "hardhat typechain",
-    "verify": "hardhat verify --network rinkeby 0x0f4ee9631f4be0a63756515141281a3e2b293bbe" 
+    "verify": "hardhat verify --network rinkeby 0x0f4ee9631f4be0a63756515141281a3e2b293bbe"
   },
   "license": "MIT",
   "devDependencies": {
@@ -29,5 +29,8 @@
     "ts-node": ">=8.0.0",
     "typechain": "^8.1.0",
     "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "@aragon/osx": "^1.2.0"
   }
 }
