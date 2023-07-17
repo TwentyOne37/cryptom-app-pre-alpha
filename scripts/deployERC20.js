@@ -12,13 +12,13 @@ async function main() {
 
   // Deploy USDC contract
   const USDC = await hre.ethers.getContractFactory("USDC");
-  const usdc = await USDC.deploy(ethers.parseUnits("1000", "ether"));
+  const usdc = await USDC.deploy(ethers.parseUnits("1000", "mwei"));
   await usdc.waitForDeployment();
   console.log("USDC deployed to:", await usdc.getAddress());
 
   // Deploy USDT contract
   const USDT = await hre.ethers.getContractFactory("USDT");
-  const usdt = await USDT.deploy(ethers.parseUnits("1000", "ether"));
+  const usdt = await USDT.deploy(ethers.parseUnits("1000", "mwei"));
   await usdt.waitForDeployment();
   console.log("USDT deployed to:", await usdt.getAddress());
 
@@ -33,7 +33,7 @@ async function main() {
   // USDC
   const usdcTransferTx = await usdc.transfer(
     deployer.address,
-    ethers.parseUnits("1000", "ether")
+    ethers.parseUnits("1000", "mwei")
   );
   await usdcTransferTx.wait();
   console.log("USDC tokens have been sent to:", deployer.address);
@@ -41,7 +41,7 @@ async function main() {
   // USDT
   const usdtTransferTx = await usdt.transfer(
     deployer.address,
-    ethers.parseUnits("1000", "ether")
+    ethers.parseUnits("1000", "mwei")
   );
   await usdtTransferTx.wait();
   console.log("USDT tokens have been sent to:", deployer.address);
